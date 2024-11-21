@@ -1,0 +1,199 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1a202c;
+    color: #e2e8f0;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+header h1 {
+    font-size: 4rem;
+    margin: 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+header p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header nav {
+    margin-top: 2rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.2rem;
+    border: 2px solid white;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+}
+
+header nav a:hover {
+    background: white;
+    color: #6e8efb;
+}
+
+main {
+    padding: 2rem 1rem;
+}
+
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: #2d3748;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+section h2 {
+    color: #63b3ed;
+    font-size: 2.5rem;
+}
+
+.skill-bar {
+    margin-top: 1rem;
+    background: #2a4365;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+}
+
+.skill-bar span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(135deg, #63b3ed, #3182ce);
+    width: 0;
+    animation: loadBar 2s ease-in-out forwards;
+}
+
+@keyframes loadBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--skill-level);
+    }
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    border: 2px solid #4a5568;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #1a202c;
+    color: #e2e8f0;
+}
+
+form button {
+    background: #63b3ed;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #3182ce;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    header nav a {
+        margin: 10px 0;
+        font-size: 1rem;
+    }
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: #2d3748;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1rem;
+}
+
+.project-info h3 {
+    margin: 0;
+    color: #63b3ed;
+}
+
+.project-info p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.project-info a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #63b3ed;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.project-info a:hover {
+    color: #3182ce;
+}
